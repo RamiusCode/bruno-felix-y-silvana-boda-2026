@@ -177,7 +177,7 @@
 
 <!-- Audio element -->
 <audio id="music-audio" preload="auto">
-  <source src="/musica/melodia.mp3" type="audio/mpeg" />
+  <source src="/musica/melo.mp3" type="audio/mpeg" />
   Tu navegador no soporta audio HTML5.
 </audio>
 
@@ -215,17 +215,17 @@
       end: "bottom 5%",
 
       onEnter: () => {
-        console.log('🎵 ✨ Reproductor apareciendo...');
+        console.log("🎵 ✨ Reproductor apareciendo...");
         animatePlayerIn();
       },
 
       onEnterBack: () => {
-        console.log('🎵 👆 Usuario regresó, reproductor visible');
+        console.log("🎵 👆 Usuario regresó, reproductor visible");
         animatePlayerIn();
       },
 
       onLeaveBack: () => {
-        console.log('🎵 ⬆️ Reproductor desapareciendo elegantemente');
+        console.log("🎵 ⬆️ Reproductor desapareciendo elegantemente");
         animatePlayerOut();
       },
     });
@@ -249,7 +249,7 @@
             duration: 0.5,
             ease: "power2.out",
           },
-          "-=0.4"
+          "-=0.4",
         )
         .to(
           "#controls-container",
@@ -259,7 +259,7 @@
             duration: 0.6,
             ease: "back.out(1.5)",
           },
-          "-=0.3"
+          "-=0.3",
         )
         .to(
           "#progress-container",
@@ -269,7 +269,7 @@
             duration: 0.5,
             ease: "power2.out",
           },
-          "-=0.4"
+          "-=0.4",
         )
         .to(
           "#romantic-text",
@@ -278,7 +278,7 @@
             duration: 0.4,
             ease: "power2.out",
           },
-          "-=0.3"
+          "-=0.3",
         );
     }
 
@@ -299,7 +299,7 @@
             duration: 0.4,
             ease: "power2.in",
           },
-          "-=0.2"
+          "-=0.2",
         )
         .to(
           "#controls-container",
@@ -309,7 +309,7 @@
             duration: 0.4,
             ease: "back.in(1.2)",
           },
-          "-=0.3"
+          "-=0.3",
         )
         .to(
           "#player-title",
@@ -319,7 +319,7 @@
             duration: 0.4,
             ease: "power2.in",
           },
-          "-=0.3"
+          "-=0.3",
         )
         .to(
           "#music-player-container",
@@ -330,7 +330,7 @@
             duration: 0.5,
             ease: "power3.in",
           },
-          "-=0.3"
+          "-=0.3",
         );
     }
 
@@ -364,10 +364,10 @@
         updateTimeDisplay();
         console.log(
           `Duración real: ${Math.floor(duration / 60)}:${Math.floor(
-            duration % 60
+            duration % 60,
           )
             .toString()
-            .padStart(2, "0")}`
+            .padStart(2, "0")}`,
         );
       });
 
@@ -453,21 +453,26 @@
       container.appendChild(wave);
 
       // Animar cada onda
-      gsap.timeline()
+      gsap
+        .timeline()
         .to(wave, {
           opacity: 0.6,
           duration: 0.3,
           delay: i * 0.15,
-          ease: "power2.out"
-        })
-        .to(wave, {
-          width: 120,
-          height: 120,
-          opacity: 0,
-          duration: 1,
           ease: "power2.out",
-          onComplete: () => wave.remove()
-        }, `-=0.1`);
+        })
+        .to(
+          wave,
+          {
+            width: 120,
+            height: 120,
+            opacity: 0,
+            duration: 1,
+            ease: "power2.out",
+            onComplete: () => wave.remove(),
+          },
+          `-=0.1`,
+        );
     }
   }
 
