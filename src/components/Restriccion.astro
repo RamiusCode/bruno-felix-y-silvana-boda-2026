@@ -1,12 +1,15 @@
 ---
 // NoNinos2.astro
 ---
+
 <section class="py-8 md:py-12 px-4 relative overflow-hidden">
   <!-- Fondo sutil -->
-  <div class="absolute inset-0 bg-gradient-to-b from-[#fffaf5]/30 via-white/10 to-[#fffaf5]/30 z-0"></div>
+  <div
+    class="absolute inset-0 bg-gradient-to-b from-[#fffaf5]/30 via-white/10 to-[#fffaf5]/30 z-0"
+  >
+  </div>
 
   <div class="max-w-3xl mx-auto relative z-10">
-
     <!-- 🌸 FLORES DECORATIVAS SUPERIORES -->
     <div class="flex justify-center mb-6" id="flores-ninos2-top">
       <img
@@ -18,52 +21,81 @@
 
     <!-- CONTENEDOR PRINCIPAL -->
     <div class="relative">
-
       <!-- 🍃 HOJAS FLOTANTES IZQUIERDA -->
-      <div class="absolute -left-6 md:-left-12 top-0 w-20 md:w-28 pointer-events-none z-0" id="hoja-float-izq">
-        <img src="/imagenes/Hojas.webp" alt="Hojas" class="w-full h-auto object-contain opacity-50" />
+      <div
+        class="absolute -left-6 md:-left-12 top-0 w-20 md:w-28 pointer-events-none z-0"
+        id="hoja-float-izq"
+      >
+        <img
+          src="/imagenes/Hojas.webp"
+          alt="Hojas"
+          class="w-full h-auto object-contain opacity-50"
+        />
       </div>
 
       <!-- 🍃 HOJAS FLOTANTES DERECHA -->
-      <div class="absolute -right-6 md:-right-12 top-0 w-20 md:w-28 pointer-events-none z-0" id="hoja-float-der">
-        <img src="/imagenes/Hojas.webp" alt="Hojas" class="w-full h-auto object-contain transform -scale-x-100 opacity-50" />
+      <div
+        class="absolute -right-6 md:-right-12 top-0 w-20 md:w-28 pointer-events-none z-0"
+        id="hoja-float-der"
+      >
+        <img
+          src="/imagenes/Hojas.webp"
+          alt="Hojas"
+          class="w-full h-auto object-contain transform -scale-x-100 opacity-50"
+        />
       </div>
 
       <!-- TÍTULO -->
       <div class="text-center mb-6" id="titulo-ninos2">
-        <h2 class="font-great-vibes text-3xl md:text-4xl lg:text-5xl text-[#C9A961] mb-4">
+        <h2
+          class="font-great-vibes text-3xl md:text-4xl lg:text-5xl text-[#C9A961] mb-4"
+        >
           Celebración para adultos
         </h2>
         <!-- Línea decorativa -->
         <div class="flex items-center justify-center gap-3">
-          <div class="w-16 h-[2px] bg-gradient-to-r from-transparent to-[#C9A961]"></div>
+          <div
+            class="w-16 h-[2px] bg-gradient-to-r from-transparent to-[#C9A961]"
+          >
+          </div>
           <div class="w-2 h-2 rounded-full bg-[#C9A961]"></div>
-          <div class="w-16 h-[2px] bg-gradient-to-l from-transparent to-[#C9A961]"></div>
+          <div
+            class="w-16 h-[2px] bg-gradient-to-l from-transparent to-[#C9A961]"
+          >
+          </div>
         </div>
       </div>
 
       <!-- MENSAJE PRINCIPAL -->
-      <div class="bg-white/90 backdrop-blur-sm rounded-2xl border border-[#C9A961]/20 py-8 md:py-10 px-4 md:px-10 shadow-lg relative z-10" id="card-mensaje-ninos2">
-        
+      <div
+        class="bg-white/90 backdrop-blur-sm rounded-2xl border border-[#C9A961]/20 py-8 md:py-10 px-4 md:px-10 shadow-lg relative z-10"
+        id="card-mensaje-ninos2"
+      >
         <!-- ICONO AS.PNG ARRIBA DEL TEXTO -->
         <div class="flex justify-center mb-6" id="icono-as">
-          <div class="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 transform transition-transform duration-300 hover:scale-110">
-                <img
-                    src="/imagenes/beb.png"
-                    alt="Icono de Bouquet"
-                    class="w-full h-full object-contain icono-dorado"
-                />
-              </div>
+          <div
+            class="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 transform transition-transform duration-300 hover:scale-110"
+          >
+            <img
+              src="/imagenes/restriccion.png"
+              alt="Icono de Bouquet"
+              class="w-full h-full object-contain icono-dorado"
+            />
+          </div>
         </div>
 
         <div class="text-center" id="texto-ninos2">
-          <p class="font-charm text-xl md:text-xl lg:text-2xl text-[#626a54] leading-relaxed mb-5">
+          <p
+            class="font-charm text-xl md:text-xl lg:text-2xl text-[#626a54] leading-relaxed mb-5"
+          >
             Aunque apreciamos a sus pequeños,<br />
             hemos decidido celebrar este momento<br />
             <span class="text-[#C9A961] font-bold">sin niños</span>.
           </p>
-          
-          <p class="font-charm text-xl md:text-lg lg:text-xl text-[#626a54] leading-relaxed ">
+
+          <p
+            class="font-charm text-xl md:text-lg lg:text-xl text-[#626a54] leading-relaxed"
+          >
             Deseamos que esta decisión no impida<br />
             su compañía en este día tan importante.
           </p>
@@ -79,11 +111,8 @@
             <div class="w-2 h-2 rounded-full bg-[#C9A961] opacity-60"></div>
           </div>
         </div>
-
       </div>
-
     </div>
-
   </div>
 </section>
 
@@ -93,7 +122,7 @@
 
   gsap.registerPlugin(ScrollTrigger);
 
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     document.addEventListener("DOMContentLoaded", () => {
       console.log("👶 Iniciando animación de No Niños (versión 2)...");
 
@@ -114,12 +143,15 @@
         end: "top 20%",
         onEnter: () => {
           // TODAS LAS ANIMACIONES AL MISMO TIEMPO
-          gsap.to("#flores-ninos2-top, #titulo-ninos2, #card-mensaje-ninos2, #icono-as, #texto-ninos2, #decoracion-ninos2", {
-            opacity: 1,
-            scale: 1,
-            duration: 1.2,
-            ease: "back.out(1.4)",
-          });
+          gsap.to(
+            "#flores-ninos2-top, #titulo-ninos2, #card-mensaje-ninos2, #icono-as, #texto-ninos2, #decoracion-ninos2",
+            {
+              opacity: 1,
+              scale: 1,
+              duration: 1.2,
+              ease: "back.out(1.4)",
+            },
+          );
 
           // Hojas laterales también simultáneas
           gsap.to("#hoja-float-izq, #hoja-float-der", {
